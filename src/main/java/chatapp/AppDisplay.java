@@ -21,6 +21,7 @@ public class AppDisplay extends BorderPane {
     @FXML private ScrollPane messagePane;
     @FXML private VBox messageArea;
     @FXML private ImageView userAvatar;
+    @FXML private Label userName;
     @FXML private Label userStatus;
     @FXML private TextField messageInput;
     @FXML private Button sendButton;
@@ -40,6 +41,7 @@ public class AppDisplay extends BorderPane {
     }
 
     public void initialize() {
+        userName.setText(receiver.getUsername());
         userAvatar.setImage(receiver.getAvatar());
         if (receiver.isOnline()) {
             userStatus.setText("Online");
@@ -57,6 +59,7 @@ public class AppDisplay extends BorderPane {
                 userStatus.getStyleClass().remove("online");
             }
         });
+
         sendButton.setOnAction(e -> {
             sendMessage();
         });
