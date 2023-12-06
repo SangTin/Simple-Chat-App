@@ -96,6 +96,10 @@ public class AppDisplay extends BorderPane {
         Label messageLabel = new Label(message.getMessage());
         messageLabel.getStyleClass().add("message-text");
         messageContainer.getChildren().add(messageLabel);
+        messageLabel.setMaxWidth(messageArea.getWidth() * 0.7);
+        messageArea.widthProperty().addListener((observable, oldValue, newValue) -> {
+            messageLabel.setMaxWidth(newValue.doubleValue() * 0.7);
+        });
 
         HBox messageRow = new HBox();
         messageRow.getStyleClass().add("message-row");

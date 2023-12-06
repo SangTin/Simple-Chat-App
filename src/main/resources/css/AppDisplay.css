@@ -52,7 +52,6 @@
 .message-area .message-row .message-pane .message-text {
     -fx-font-size: 15px;
     -fx-text-fill: white;
-    -fx-max-width: 250px;
     -fx-wrap-text: true;
 }
 

@@ -11,8 +11,10 @@ public class ChatApp extends Application {
         BorderPane app = new AppDisplay();
 
         primaryStage.setTitle("Chat App");
-        primaryStage.setScene(new javafx.scene.Scene(app));
+        primaryStage.setScene(new javafx.scene.Scene(app, 400, 600));
         primaryStage.onCloseRequestProperty().setValue(e -> System.exit(0));
+        primaryStage.setMinWidth(400);
+        primaryStage.setMinHeight(600);
         primaryStage.show();
     }
 }
