@@ -1,0 +1,89 @@
+.root * {
+    -sender-color: #6660e8;
+    -receiver-color: #e66e99;
+}
+
+.header-area {
+    -fx-background-color: white;
+}
+
+.header-area .button {
+    -fx-background-color: transparent;
+}
+
+.header-area .button .icon {
+    -fx-fill: transparent;
+    -fx-stroke-width: 2;
+    -fx-stroke: black;
+    -fx-stroke-line-join: round;
+    -fx-stroke-line-cap: round;
+}
+
+.header-area .user-name {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.header-area .user-status {
+    -fx-font-size: 10px;
+    -fx-text-fill: rgb(128, 128, 128);
+}
+
+.header-area .user-status .status-icon {
+    -fx-fill: rgb(128, 128, 128);
+}
+
+.header-area .user-status.online .status-icon {
+    -fx-fill: rgb(0, 128, 0);
+}
+
+.message-area {
+    -fx-background-color: #e9e5fb;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+.message-area .message-pane {
+    -fx-padding: 10;
+    -fx-pref-width: -1;
+    -fx-pref-height: -1;
+}
+
+.message-area .message-row .message-pane .message-text {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-max-width: 250px;
+    -fx-wrap-text: true;
+}
+
+.message-area .message-row.received {
+    -fx-alignment: center-left;
+}
+
+.message-area .message-row.received .message-pane {
+    -fx-background-color: -receiver-color;
+    -fx-background-radius: 0 20 20 20;
+}
+
+.message-area .message-row.sent {
+    -fx-alignment: center-right;
+}
+
+.message-area .message-row.sent .message-pane {
+    -fx-background-color: -sender-color;
+    -fx-background-radius: 20 0 20 20;
+}
+
+.input-area .message-input {
+    -fx-background-color: transparent;
+
+}
+
+.input-area .button {
+    -fx-background-color: rgba(102, 96, 232, 0.25);
+    -fx-background-radius: 10;
+}
+
+.input-area .button .icon {
+    -fx-fill: -sender-color;
+}
